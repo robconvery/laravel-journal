@@ -1,0 +1,58 @@
+{
+    "name": "robconvery/laravel-journal",
+    "description": "Simple journal package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Convery",
+            "email": "robconvery@me.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/robconvery/laravel-dashboard-theme"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-libxml": "*",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "illuminate/support": "~5",
+        "robconvery/laravel-dashboard-theme": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "orchestra/testbench": "^3.0",
+        "squizlabs/php_codesniffer": "*",
+        "fzaninotto/faker": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Robconvery\\LaravelJournal\\": "src/"
+        }
+    },
+    "autoload-dev":  {
+        "psr-4": {
+            "Robconvery\\LaravelJournal\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cs": [
+            "./vendor/bin/phpcs --standard=PSR2 src --ignore=*/Views/*"
+        ],
+        "cs-fix": [
+            "./vendor/bin/phpcbf --standard=PSR2 src --ignore=*/Views/*"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Robconvery\\LaravelJournal\\PackageServiceProvider"
+            ]
+        }
+    }
+
+}
